@@ -3,27 +3,1096 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio Profesional - Samuel </title>
+    <title>Samuel Antonio Garduño Viviana - Desarrollador Web & Móvil</title>
+    <meta name="description" content="Portfolio profesional de Samuel Antonio Garduño Viviana, desarrollador Full Stack Junior especializado en React, Next.js, Laravel, Node.js, Flask y Cloud Computing con AWS.">
+    <meta name="keywords" content="desarrollador web, desarrollador móvil, Full Stack, Laravel, React, Next.js, Flask, AWS, Firebase, Cloud, React Native, programador, freelancer">
+    <meta name="author" content="Samuel Antonio Garduño Viviana">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Samuel Antonio Garduño Viviana - Desarrollador Web & Móvil">
+    <meta property="og:description" content="Portfolio profesional de Samuel Antonio Garduño Viviana, desarrollador web y móvil especializado en Laravel, PHP y React Native con conocimientos en redes y configuración.">
+    <meta property="og:image" content="img/og-image.jpg">
+    <meta property="og:url" content="https://samuelgarduno.com">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Samuel Antonio Garduño Viviana - Desarrollador">
+    <meta name="twitter:description" content="Portfolio profesional de Samuel Antonio Garduño Viviana, desarrollador web y móvil con habilidades en redes.">
+    <meta name="twitter:image" content="img/og-image.jpg">
+    <!-- Theme Color for Browser -->
+    <meta name="theme-color" content="#4a8eff">
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="img/blanco.webp" as="image">
 </head>
 <body>
-    <header>
-        <h1>Hola, soy un Ingeniero en Desarrollo Web</h1>
-        <p>Bienvenido a mi espacio de proyectos integrales.</p>
-    </header>
-    <main>
-        <section>
-            <h2>Habilidades Técnicas</h2>
-            <ul>
-                <li>JavaScript / Node.js</li>
-                <li>Control de Versiones (Git & GitHub)</li>
-                <li>Despliegue e Infraestructura Cloud</li>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">Saltar al contenido principal</a>
+    
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+        <div class="loader" aria-label="Cargando...">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <!-- Modal para ver imágenes -->
+    <div id="imageModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalCaption">
+        <span class="close" aria-label="Cerrar">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Imagen ampliada">
+        <div id="modalCaption"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" aria-label="Navegación principal">
+        <div class="container nav-container">
+            <a href="#" class="logo" aria-label="Inicio">
+                <span class="logo-text">Samuel<span class="text-primary">Garduño</span></span>
+            </a>
+            <ul class="nav-links" aria-label="Menú principal" aria-hidden="true">
+                <li><a href="#home" class="nav-link active" aria-current="page"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user" aria-hidden="true"></i> Sobre mí</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fas fa-code" aria-hidden="true"></i> Habilidades</a></li>
+                <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase" aria-hidden="true"></i> Experiencia</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram" aria-hidden="true"></i> Proyectos</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope" aria-hidden="true"></i> Contacto</a></li>
             </ul>
+            <button class="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+            <button class="hamburger" aria-label="Menú" aria-expanded="false" aria-controls="nav-links">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+        <div class="particles-container" id="particles-js" aria-hidden="true"></div>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text fade-in">
+                    <span class="greeting">Hola, soy</span>
+                    <h1>Samuel Antonio <span class="text-primary">Garduño Viviana</span></h1>
+                    <h2 class="typed-text" id="typed" aria-label="Desarrollador Web, Desarrollador Móvil, Programador Laravel, Especialista en Redes, Freelancer"></h2>
+                    <p>Apasionado por crear soluciones tecnológicas innovadoras y funcionales. Con experiencia en desarrollo web, móvil y conocimientos en configuración de redes.</p>
+                    <div class="header-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope" aria-hidden="true"></i> Contactar
+                        </a>
+                        <a href="#projects" class="btn btn-outline">
+                            <i class="fas fa-code" aria-hidden="true"></i> Ver Proyectos
+                        </a>
+                        <a href="CV Samuel Garduño.pdf" class="btn btn-secondary" download>
+                            <i class="fas fa-download" aria-hidden="true"></i> Descargar CV
+                        </a>
+                    </div>
+                </div>
+                <div class="header-image fade-in delay-1">
+                    <div class="image-wrapper">
+                        <img src="img/blanco.webp" alt="Samuel Antonio Garduño Viviana" class="profile-image">
+                    </div>
+                </div>
+            </div>
+            <!--<div class="scroll-down">
+                <a href="#about" aria-label="Desplazarse hacia abajo">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div>
+                        <span class="scroll-text">Desplázate</span>
+                        <span class="arrow"></span>
+                    </div>
+                </a>
+            </div>-->
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <span class="subtitle">Conóceme</span>
+                    <h2>Sobre Mí</h2>
+                    <div class="title-bg" aria-hidden="true">Perfil</div>
+                </div>
+                <div class="about-content">
+                    <div class="about-image fade-in">
+                        <div class="image-border">
+                            <img src="img/blanco.webp" alt="Samuel Antonio Garduño Viviana" class="about-img">
+                        </div>
+                        <div class="experience-badge">
+                            <span class="exp-number">5+</span>
+                            <span class="exp-text">Años de<br>Experiencia</span>
+                        </div>
+                    </div>
+                    <div class="about-text fade-in delay-1">
+                        <h3>Desarrollador Web & Móvil</h3>
+                        <p>Soy un desarrollador apasionado por la tecnología y la innovación. Me especializo en crear soluciones web y móviles que combinan funcionalidad y diseño atractivo. Actualmente estoy estudiando Ingeniería en Desarrollo de Software mientras trabajo en proyectos que me permiten aplicar y expandir mis conocimientos en desarrollo y redes.</p>
+                        
+                        <div class="info-list">
+                            <div class="info-item">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Teléfono:</strong> <a href="tel:+527225655614">+ 52 (722) 565 5614</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Correo electrónico:</strong> <a href="mailto:samuelagv05@gmail.com">samuelagv05@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Formación:</strong> Técnico en Programación (Titulado) | Ingeniería en Desarrollo de Software (En curso)
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-certificate" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Certificaciones:</strong> CCNAv7: Intro to Networks, CCNAv7: Switching/Routing, NDG Linux Essentials
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Ubicación:</strong> México
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-briefcase" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Disponibilidad:</strong> Tiempo completo / Freelance
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-buttons">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i> Contáctame
+                            </a>
+                            <a href="#projects" class="btn btn-outline">
+                                <i class="fas fa-eye" aria-hidden="true"></i> Portafolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section>
-            <h2>Contacto</h2>
-            <p>¡Tienes un proyecto en mente? Escríbeme a mi correo institucional.</p>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <div class="section-title">
+                    <span class="subtitle">Mis habilidades</span>
+                    <h2>Habilidades Técnicas</h2>
+                    <div class="title-bg" aria-hidden="true">Skills</div>
+                </div>
+                <div class="skills-container">
+                    <div class="skills-tabs fade-in" role="tablist" aria-label="Categorías de habilidades">
+                        <button class="tab-btn active" data-target="dev-web" role="tab" aria-selected="true" aria-controls="dev-web">Desarrollo Web</button>
+                        <button class="tab-btn" data-target="dev-movil" role="tab" aria-selected="false" aria-controls="dev-movil">Desarrollo Móvil</button>
+                        <button class="tab-btn" data-target="databases" role="tab" aria-selected="false" aria-controls="databases">Bases de Datos</button>
+                        <button class="tab-btn" data-target="cloud" role="tab" aria-selected="false" aria-controls="cloud">Cloud</button>
+                        <button class="tab-btn" data-target="networking" role="tab" aria-selected="false" aria-controls="networking">Redes</button>
+                        <button class="tab-btn" data-target="others" role="tab" aria-selected="false" aria-controls="others">Otros</button>
+                    </div>
+                    
+                    <div class="skills-content">
+                        <!-- Desarrollo Web -->
+                        <div class="tab-content active" id="dev-web" role="tabpanel" aria-labelledby="tab-dev-web" aria-hidden="false">
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-laravel" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Laravel</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="90%"></div>
+                                    </div>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-php" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>PHP</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="85%"></div>
+                                    </div>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-js" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>JavaScript</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="80%"></div>
+                                    </div>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-html5" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>HTML/CSS</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="75%"></div>
+                                    </div>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-bootstrap" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Bootstrap 5</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="75%"></div>
+                                    </div>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-react" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Next.js</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="70%"></div>
+                                    </div>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Desarrollo Móvil -->
+                        <div class="tab-content" id="dev-movil" role="tabpanel" aria-labelledby="tab-dev-movil" aria-hidden="true">
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-react" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>React Native</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="75%"></div>
+                                    </div>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-java" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Java</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="70%"></div>
+                                    </div>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Bases de Datos -->
+                        <div class="tab-content" id="databases" role="tabpanel" aria-labelledby="tab-databases" aria-hidden="true">
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-database" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>MySQL</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="85%"></div>
+                                    </div>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-database" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>MongoDB</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="30%"></div>
+                                    </div>
+                                    <span class="skill-percentage">30%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-database" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>PostgreSQL</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="20%"></div>
+                                    </div>
+                                    <span class="skill-percentage">20%</span>
+                                </div>
+
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-fire" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Firebase</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="70%"></div>
+                                    </div>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Cloud Computing -->
+                        <div class="tab-content" id="cloud" role="tabpanel" aria-labelledby="tab-cloud" aria-hidden="true">
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-aws" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>AWS EC2</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="65%"></div>
+                                    </div>
+                                    <span class="skill-percentage">65%</span>
+                                </div>
+
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-aws" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>AWS RDS</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="65%"></div>
+                                    </div>
+                                    <span class="skill-percentage">65%</span>
+                                </div>
+
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-aws" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>AWS Amplify</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="65%"></div>
+                                    </div>
+                                    <span class="skill-percentage">65%</span>
+                                </div>
+
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-fire" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Firebase</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="70%"></div>
+                                    </div>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-cloud" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Vercel</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="80%"></div>
+                                    </div>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-file-alt" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Swagger / OpenAPI</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="70%"></div>
+                                    </div>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Redes -->
+                        <div class="tab-content" id="networking" role="tabpanel" aria-labelledby="tab-networking" aria-hidden="true">
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-network-wired" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>CCNA - Routing & Switching</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="80%"></div>
+                                    </div>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-linux" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Linux Essentials</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="75%"></div>
+                                    </div>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-server" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Configuración de Redes</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="70%"></div>
+                                    </div>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Seguridad Básica de Redes</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="65%"></div>
+                                    </div>
+                                    <span class="skill-percentage">65%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Otros -->
+                        <div class="tab-content" id="others" role="tabpanel" aria-labelledby="tab-others" aria-hidden="true">
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-python" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Flask</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="60%"></div>
+                                    </div>
+                                    <span class="skill-percentage">60%</span>
+                                </div>
+
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-node-js" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Express.js</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="40%"></div>
+                                    </div>
+                                    <span class="skill-percentage">40%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-python" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Python</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="30%"></div>
+                                    </div>
+                                    <span class="skill-percentage">30%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Chart.js</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="50%"></div>
+                                    </div>
+                                    <span class="skill-percentage">50%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-cuttlefish" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>C++</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="50%"></div>
+                                    </div>
+                                    <span class="skill-percentage">50%</span>
+                                </div>
+                                
+                                <div class="skill-card">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-node" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Node.js</h3>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="50%"></div>
+                                    </div>
+                                    <span class="skill-percentage">50%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Experience Section -->
+<section id="experience" class="section">
+    <div class="container">
+        <div class="section-title">
+            <span class="subtitle">Mi trayectoria</span>
+            <h2>Experiencia Profesional</h2>
+            <div class="title-bg" aria-hidden="true">Carrera</div>
+        </div>
+        <div class="timeline">
+            
+            <!-- Tarjeta 1 - DYDETEC (Más reciente) -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">
+                    <span>Mayo - Agosto 2025</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Becario en Desarrollo Full Stack</h3>
+                    <span class="company">DYDETEC</span>
+                    <p>Desarrollo de soluciones de software en entornos reales, aplicando tecnologías modernas de frontend, backend y cloud computing.</p>
+                    <ul class="timeline-list">
+                        <li><i class="fas fa-check-circle"></i> Sistema en tiempo real con Next.js para monitoreo de cirugías (API REST + MySQL)</li>
+                        <li><i class="fas fa-check-circle"></i> App móvil con React Native y Expo para control de licencias de software</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 2 - Freelance -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">
+                    <span>2020 - Presente</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Desarrollador Web y Móvil</h3>
+                    <span class="company">Freelance</span>
+                    <p>Desarrollo de aplicaciones web con Laravel, Express.js y aplicaciones móviles con React Native y Expo. Implementación de bases de datos MySQL y despliegue en Vercel y Firebase.</p>
+                    <ul class="timeline-list">
+                        <li><i class="fas fa-check-circle"></i> Desarrollo de APIs RESTful</li>
+                        <li><i class="fas fa-check-circle"></i> Implementación de sistemas de autenticación</li>
+                        <li><i class="fas fa-check-circle"></i> Diseño de interfaces responsivas</li>
+                        <li><i class="fas fa-check-circle"></i> Optimización de rendimiento</li>
+                        <li><i class="fas fa-check-circle"></i> Configuración básica de servidores</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 3 - Servicio Social Gobierno -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">
+                    <span>7 meses</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Servicio Social - Sistema Estatal de Informática</h3>
+                    <span class="company">Gobierno del Estado</span>
+                    <p>Gestión de usuarios en el RUPAEMEX mediante correo electrónico y tickets. Otorgamiento de CUTS y organización de expedientes de los proyectos de la firma electrónica.</p>
+                    <ul class="timeline-list">
+                        <li><i class="fas fa-check-circle"></i> Gestión de usuarios en sistemas gubernamentales</li>
+                        <li><i class="fas fa-check-circle"></i> Procesamiento de solicitudes y documentación</li>
+                        <li><i class="fas fa-check-circle"></i> Organización de expedientes digitales</li>
+                        <li><i class="fas fa-check-circle"></i> Elaboración de diagramas de infraestructura</li>
+                        <li><i class="fas fa-check-circle"></i> Soporte técnico básico y configuración de redes</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 4 - Proyectos de Redes -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">
+                    <span>2023 - 2024</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Proyectos de Redes y Configuración</h3>
+                    <span class="company">Formación técnica</span>
+                    <p>Implementación de conocimientos adquiridos en certificaciones CCNA y Linux Essentials en proyectos prácticos.</p>
+                    <ul class="timeline-list">
+                        <li><i class="fas fa-check-circle"></i> Configuración de routers y switches Cisco</li>
+                        <li><i class="fas fa-check-circle"></i> Implementación de VLANs y protocolos de enrutamiento</li>
+                        <li><i class="fas fa-check-circle"></i> Administración básica de sistemas Linux</li>
+                        <li><i class="fas fa-check-circle"></i> Solución de problemas de conectividad</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <div class="section-title">
+                    <span class="subtitle">Mi portafolio</span>
+                    <h2>Proyectos Recientes</h2>
+                    <div class="title-bg" aria-hidden="true">Trabajos</div>
+                </div>
+                
+                <div class="projects-filter" role="tablist" aria-label="Filtros de proyectos">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+                    <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web</button>
+                    <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false">Móvil</button>
+                    <button class="filter-btn" data-filter="networking" role="tab" aria-selected="false">Redes</button>
+                    <button class="filter-btn" data-filter="cloud" role="tab" aria-selected="false">Cloud</button>
+                    <button class="filter-btn" data-filter="other" role="tab" aria-selected="false">Otros</button>
+                </div>
+                
+                <div class="project-grid">
+                    <!-- Proyecto 1 -->
+                    <article class="project fade-in" data-category="web">
+                        <div class="project-img-container" onclick="openModal('img/busway.png', 'BusWay - Sistema de gestión de rutas de autobuses')">
+                            <img src="img/busway.png" alt="Captura de pantalla del proyecto BusWay" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <div class="project-links">
+                                        <a href="https://busway.fun/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver sitio web de BusWay">
+                                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                        </a>
+                                        <button class="project-link zoom-image" onclick="openModal('img/busway.png', 'BusWay - Sistema de gestión de rutas de autobuses')" aria-label="Ampliar imagen">
+                                            <i class="fas fa-search" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>BusWay</h3>
+                            <p>Sistema de gestión de rutas de autobuses con panel de administración y seguimiento.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Laravel</span>
+                                <span class="project-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Proyecto 2 -->
+                    <article class="project fade-in delay-1" data-category="web">
+                        <div class="project-img-container" onclick="openModal('img/recetario.png', 'Recetario - Aplicación para gestionar recetas de cocina')">
+                            <img src="img/recetario.png" alt="Captura de pantalla del proyecto Recetario" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <div class="project-links">
+                                        <a href="https://recetario-five.vercel.app/login.html" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver sitio web de Recetario">
+                                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                        </a>
+                                        <button class="project-link zoom-image" onclick="openModal('img/recetario.png', 'Recetario - Aplicación para gestionar recetas de cocina')" aria-label="Ampliar imagen">
+                                            <i class="fas fa-search" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Recetario</h3>
+                            <p>Aplicación para gestionar recetas de cocina con login y almacenamiento de información.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">HTML/CSS</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Proyecto 3 -->
+                    <article class="project fade-in delay-2" data-category="web">
+                        <div class="project-img-container" onclick="openModal('img/flores.png', 'Flores Amarillas - Proyecto web con temática especial')">
+                            <img src="img/flores.png" alt="Captura de pantalla del proyecto Flores Amarillas" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <div class="project-links">
+                                        <a href="https://floresamarillas-alpha.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver sitio web de Flores Amarillas">
+                                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                        </a>
+                                        <button class="project-link zoom-image" onclick="openModal('img/flores.png', 'Flores Amarillas - Proyecto web con temática especial')" aria-label="Ampliar imagen">
+                                            <i class="fas fa-search" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Flores Amarillas</h3>
+                            <p>Proyecto web con una temática especial basado en React y Vercel.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML/CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Proyecto 4 -->
+                    <article class="project fade-in" data-category="web">
+                        <div class="project-img-container" onclick="openModal('img/hospital.png', 'Hospital - Sistema de gestión hospitalaria')">
+                            <img src="img/hospital.png" alt="Captura de pantalla del proyecto Hospital" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <div class="project-links">
+                                        <a href="https://github.com/SamuAGV/CORRECION_CRUD_HOSPITAL" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver código en GitHub">
+                                            <i class="fab fa-github" aria-hidden="true"></i>
+                                        </a>
+                                        <button class="project-link zoom-image" onclick="openModal('img/hospital.png', 'Hospital - Sistema de gestión hospitalaria')" aria-label="Ampliar imagen">
+                                            <i class="fas fa-search" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Hospital</h3>
+                            <p>Proyecto hecho para un hospital para la gestión de los Médicos, Pacientes y hospitales.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Laravel</span>
+                                <span class="project-tag">Bootstrap</span>
+                                <span class="project-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Proyecto 5 -->
+                    <article class="project fade-in delay-1" data-category="other">
+                        <div class="project-img-container" onclick="openModal('img/filtromatic.png', 'FiltroMatic - Banda transportadora que clasifica residuos')">
+                            <img src="img/filtromatic.png" alt="Captura de pantalla del proyecto FiltroMatic" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <div class="project-links">
+                                        <a href="https://github.com/SamuAGV/FiltroMatic" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver código en GitHub">
+                                            <i class="fab fa-github" aria-hidden="true"></i>
+                                        </a>
+                                        <button class="project-link zoom-image" onclick="openModal('img/filtromatic.png', 'FiltroMatic - Banda transportadora que clasifica residuos')" aria-label="Ampliar imagen">
+                                            <i class="fas fa-search" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>FiltroMatic</h3>
+                            <p>Proyecto de banda transportadora que clasifica residuos por color mediante sensores.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">MySQL</span>
+                                <span class="project-tag">Express.js</span>
+                                <span class="project-tag">Node</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Proyecto 6 -->
+                    <article class="project fade-in delay-2" data-category="networking">
+                        <div class="project-img-container" onclick="openModal('img/redes.png', 'Configuración de Red - Proyecto de implementación de VLANs')">
+                            <img src="img/redes.png" alt="Diagrama de red de proyecto de configuración" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <div class="project-links">
+                                        <button class="project-link zoom-image" onclick="openModal('img/redes.png', 'Configuración de Red - Proyecto de implementación de VLANs')" aria-label="Ampliar imagen">
+                                            <i class="fas fa-search" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Configuración de Red</h3>
+                            <p>Implementación de VLANs y protocolos de enrutamiento en entorno Cisco.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Cisco</span>
+                                <span class="project-tag">VLAN</span>
+                                <span class="project-tag">Routing</span>
+                                <span class="project-tag">CCNA</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Proyecto 7 -->
+                    <article class="project fade-in" data-category="cloud">
+                        <div class="project-img-container">
+                            <img src="img/aws-api.png" alt="API REST Flask AWS" class="project-img" onerror="this.style.background='#1a1a2e';this.src='';this.alt='API REST Flask + AWS'">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <div class="project-links">
+                                        <a href="https://github.com/SamuAGV" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver en GitHub">
+                                            <i class="fab fa-github" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>API REST Flask + AWS</h3>
+                            <p>API REST desarrollada con Flask, desplegada en AWS EC2, documentada con Swagger (OpenAPI) y conectada a base de datos en AWS RDS. Frontend desplegado con AWS Amplify.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Flask</span>
+                                <span class="project-tag">AWS EC2</span>
+                                <span class="project-tag">AWS RDS</span>
+                                <span class="project-tag">Amplify</span>
+                                <span class="project-tag">Swagger</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 8 -->
+                    <article class="project fade-in delay-1" data-category="cloud mobile">
+                        <div class="project-img-container">
+                            <img src="img/busapp.png" alt="App Monitoreo Autobuses" class="project-img" onerror="this.style.background='#1a1a2e';this.src='';this.alt='App Monitoreo Autobuses'">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <div class="project-links">
+                                        <a href="https://github.com/SamuAGV" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver en GitHub">
+                                            <i class="fab fa-github" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Monitoreo de Autobuses</h3>
+                            <p>App móvil en React Native con Firebase para monitoreo en tiempo real de autobuses. Integra geolocalización, autenticación por roles y visualización en mapas para mejorar seguridad y eficiencia del servicio.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">React Native</span>
+                                <span class="project-tag">Firebase</span>
+                                <span class="project-tag">Geolocalización</span>
+                                <span class="project-tag">Mapas</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="section stats-section" aria-label="Estadísticas">
+            <div class="container">
+                <div class="stats-container">
+                    <div class="stat-item fade-in">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-text">Proyectos Completados</div>
+                    </div>
+                    
+                    <div class="stat-item fade-in delay-1">
+                        <div class="stat-icon">
+                            <i class="fas fa-coffee" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-number" data-count="1250">0</div>
+                        <div class="stat-text">Tazas de Café</div>
+                    </div>
+                    
+                    <div class="stat-item fade-in delay-2">
+                        <div class="stat-icon">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-number" data-count="25000">0</div>
+                        <div class="stat-text">Líneas de Código</div>
+                    </div>
+                    
+                    <div class="stat-item fade-in delay-3">
+                        <div class="stat-icon">
+                            <i class="fas fa-smile" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-number" data-count="10">0</div>
+                        <div class="stat-text">Clientes Satisfechos</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <span class="subtitle">Ponte en contacto</span>
+                    <h2>Contáctame</h2>
+                    <div class="title-bg" aria-hidden="true">Contacto</div>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info fade-in">
+                        <div class="contact-card">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Teléfono</h3>
+                                    <p><a href="tel:+527225655614">+ 52 (722) 565 5614</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:samuelagv05@gmail.com">samuelagv05@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Ubicación</h3>
+                                    <p>México</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-card">
+                            <h3>Sígueme</h3>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/samuel-gardu%C3%B1o-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                </a>
+                                <a href="https://github.com/SamuAGV" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <a href="https://www.instagram.com/dev_samu_/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--<div class="contact-form-container fade-in delay-1">
+                        <form id="contact-form" class="contact-form" aria-label="Formulario de contacto">
+                            <div class="form-header">
+                                <h3>Envíame un mensaje</h3>
+                                <p>Completa el formulario y me pondré en contacto contigo lo antes posible.</p>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nombre <span class="required">*</span></label>
+                                    <input type="text" id="name" name="name" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required aria-required="true">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Asunto</label>
+                                <input type="text" id="subject" name="subject">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mensaje <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>-->
+                </div>
+            </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">
+                        <span class="logo-text">Samuel<span class="text-primary">Garduño</span></span>
+                    </a>
+                    <p>Desarrollador Web & Móvil | Especialista en Redes</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#about">Sobre mí</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#projects">Proyectos</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> + 52 (722) 565 5614</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:samuelagv05@gmail.com">samuelagv05@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> México</p>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Redes Sociales</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/samuel-gardu%C3%B1o-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/SamuAGV" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dev_samu_/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Samuel Antonio Garduño Viviana. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="#home" class="back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </a>
+    
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function openModal(imageSrc, captionText) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            var caption = document.getElementById("modalCaption");
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+            caption.innerHTML = captionText;
+        }
+
+        var modal = document.getElementById("imageModal");
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
